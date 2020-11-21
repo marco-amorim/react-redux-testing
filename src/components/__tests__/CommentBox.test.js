@@ -3,11 +3,16 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import CommentBox from 'components/CommentBox';
+import Root from 'Root';
 
 let wrapped;
 
 beforeEach(() => {
-	wrapped = shallow(<CommentBox />);
+	wrapped = shallow(
+		<Root>
+			<CommentBox />
+		</Root>
+	);
 });
 
 afterEach(() => {
